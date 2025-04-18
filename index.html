@@ -96,17 +96,17 @@
                 <h4 class="text-sm font-semibold text-gray-600 mb-2">Filter by Category:</h4>
                 <div id="categoryButtons" class="flex flex-wrap gap-2">
                     <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="automation">Automation</button>
-                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="data">Data</button>
+                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="security">Security</button>
+                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="website">Website</button>
+                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="audits">Audits</button>
+                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="advertising">Advertising</button>
                     <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="llm">LLM</button>
                     <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="productivity">Productivity</button>
-                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="web">Web</button>
                     <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="database">Database</button>
                     <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="spreadsheet">Spreadsheet</button>
-                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="custom code">Custom Code</button>
                     <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="marketing">Marketing</button>
                     <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="sales">Sales</button>
                     <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="admin">Admin</button>
-                    <!-- Add more categories as needed -->
                 </div>
             </div>
         </div>
@@ -114,7 +114,7 @@
 
         <div id="services-list" class="space-y-6 text-gray-700 text-lg leading-relaxed">
             <!-- Service Item Structure: Use data-keywords for filtering -->
-            <div class="service-item" data-keywords="core personal business automation google workspace ms 365 email calendar custom code productivity web">
+            <div class="service-item" data-keywords="core personal business automation google workspace ms 365 email calendar custom code productivity website marketing seo">
                 <h3 class="text-xl font-semibold text-blue-800 mb-2">Core Personal & Business Automation</h3>
                 <ul class="list-disc list-inside space-y-1">
                     <li>Automating calendar events, email, reminders, and email responses (Google App Scripts & MS 365 tools).</li>
@@ -124,7 +124,7 @@
                 </ul>
             </div>
 
-            <div class="service-item" data-keywords="lead generation marketing automation crm spreadsheet zapier make mailchimp activecampaign gmail social media buffer hootsuite content repurposing ai n8n web">
+            <div class="service-item" data-keywords="lead generation marketing automation crm spreadsheet zapier make mailchimp activecampaign gmail social media buffer hootsuite content repurposing ai n8n website forms advertising">
                 <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">1. Lead Generation & Marketing Automation</h3>
                 <ul class="list-disc list-inside space-y-2">
                     <li><span class="font-medium">Lead Capture & Nurturing:</span><ul><li>Website Forms: Automate CRM/spreadsheet data entry, lead tagging, and notifications (Zapier/Make).</li><li>Automated Follow-ups: Setup email sequences for inquiries (Mailchimp, ActiveCampaign, Gmail via Zapier/Make).</li></ul></li>
@@ -177,37 +177,86 @@
                 </ul>
             </div>
 
-            <!-- NEW OFFERINGS START HERE -->
-            <div class="service-item" data-keywords="custom chrome extension productivity browser automation custom code web">
+            <div class="service-item" data-keywords="custom chrome extension productivity browser automation custom code website">
                 <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">7. Custom Chrome Extensions</h3>
                 <p>Develop bespoke Chrome extensions to streamline browser-based workflows, automate repetitive tasks within web applications, or enhance productivity.</p>
             </div>
 
-            <div class="service-item" data-keywords="file analysis tagging llm ai data organization custom code automation">
+            <div class="service-item" data-keywords="file analysis tagging llm ai data organization custom code automation database">
                 <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">8. File Analysis & Tagging with LLMs</h3>
                 <p>Utilize modern Large Language Model (LLM) tools to analyze batches of documents or files, extract key information, and automatically apply relevant tags for better organization and searchability.</p>
             </div>
 
-            <div class="service-item" data-keywords="proof of concept poc mvp custom code development innovation testing">
+            <div class="service-item" data-keywords="proof of concept poc mvp custom code development innovation testing automation">
                 <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">9. General Proof of Concepts (POCs)</h3>
                 <p>Build functional prototypes or proof of concepts to test the feasibility of new ideas, automation workflows, or software solutions before committing to full-scale development.</p>
             </div>
 
-            <div class="service-item" data-keywords="data migration spreadsheet database excel google sheets airtable sql nosql data transformation etl">
+            <div class="service-item" data-keywords="data migration spreadsheet database excel google sheets airtable sql nosql data transformation etl automation">
                 <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">10. Spreadsheet ↔ Database Migrations</h3>
                 <p>Migrate data efficiently between spreadsheets (Excel, Google Sheets) and structured databases (like SQL, Airtable, etc.), or vice versa, ensuring data integrity and usability.</p>
             </div>
 
-            <div class="service-item" data-keywords="data deduplication cleaning records database spreadsheet crm list hygiene data quality">
+            <div class="service-item" data-keywords="data deduplication cleaning records database spreadsheet crm list hygiene data quality automation">
                 <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">11. Record Deduplication</h3>
                 <p>Identify and merge (semantic) duplicate records within datasets, spreadsheets, CRMs, or databases to improve data quality, accuracy, and efficiency.</p>
             </div>
 
-            <div class="service-item" data-keywords="anomaly detection data analysis outliers monitoring reporting statistics custom code llm ai">
+            <div class="service-item" data-keywords="anomaly detection data analysis outliers monitoring reporting statistics custom code llm ai automation security">
                 <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">12. Anomaly Detection</h3>
                 <p>Implement systems or scripts to automatically detect unusual patterns, outliers, or anomalies in your data streams or datasets, enabling proactive identification of potential issues or opportunities.</p>
             </div>
-            <!-- NEW OFFERINGS END HERE -->
+
+            <div class="service-item" data-keywords="security vulnerability testing scanning cybersecurity penetration testing web application network audits owasp automation">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">13. Security, Vulnerability Testing & Scanning</h3>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Basic web application vulnerability scanning (e.g., OWASP ZAP, Nikto).</li>
+                    <li>Infrastructure security posture review (common misconfigurations).</li>
+                    <li>Automated security checks within CI/CD pipelines.</li>
+                    <li>Security awareness guidance for teams.</li>
+                </ul>
+            </div>
+
+            <div class="service-item" data-keywords="audits pre-audits compliance readiness security itgc soc2 pci hipaa iso 27001 nist cybersecurity framework risk assessment nyc nys usa governance">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">14. Audits and Pre-audits (Readiness Assessments)</h3>
+                <p class="mb-2">Assisting businesses in preparing for formal security and compliance audits. Focus areas applicable in NY/NYC/USA include:</p>
+                <ul class="list-disc list-inside space-y-1">
+                    <li><span class="font-medium">IT General Controls (ITGC) Readiness:</span> Reviewing controls around access, change management, and IT operations.</li>
+                    <li><span class="font-medium">SOC 2 Readiness Assessment:</span> Helping gather evidence and assess controls against Trust Services Criteria (Security, Availability, etc.).</li>
+                    <li><span class="font-medium">PCI DSS Readiness Assessment:</span> Assisting merchants/service providers in understanding and preparing for Payment Card Industry Data Security Standard requirements.</li>
+                    <li><span class="font-medium">HIPAA Security Rule Readiness:</span> Assisting covered entities and business associates with technical safeguard implementation and documentation for healthcare data protection.</li>
+                    <li><span class="font-medium">ISO 27001 / NIST CSF Gap Analysis:</span> Comparing current practices against recognized cybersecurity frameworks to identify areas for improvement.</li>
+                    <li><span class="font-medium">Website Accessibility Audits (e.g., WCAG):</span> Checking websites for compliance with accessibility standards.</li>
+                </ul>
+                <p class="mt-2 text-sm italic text-gray-600">Note: These are readiness assessments and gap analyses to prepare for formal audits conducted by certified auditors, not formal attestations.</p>
+            </div>
+
+            <div class="service-item" data-keywords="data scraping reconnaissance web scraping data collection research market analysis lead generation competitive intelligence automation custom code python beautifulsoup selenium">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">15. Data Scraping and Reconnaissance</h3>
+                <p>Ethical and compliant extraction of publicly available data from websites for market research, lead generation, competitive analysis, or specific data collection needs. Utilizing custom scripts and tools.</p>
+            </div>
+
+            <div class="service-item" data-keywords="website building hosting maintenance web development custom code wordpress cms domain dns security updates backups support">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">16. Custom Website Building, Hosting & Maintenance</h3>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Developing custom websites tailored to specific business needs (front-end and back-end).</li>
+                    <li>Setting up and managing website hosting environments.</li>
+                    <li>Providing ongoing website maintenance: updates, backups, security checks, performance monitoring, and content updates.</li>
+                    <li>Working with popular CMS platforms (like WordPress) or building from scratch.</li>
+                </ul>
+            </div>
+
+            <div class="service-item" data-keywords="advertising campaigns marketing google ads facebook ads instagram ads linkedin ads ppc sem social media marketing analytics reporting budget management strategy automation">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">17. Advertising Campaigns</h3>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Setting up and managing Pay-Per-Click (PPC) campaigns on platforms like Google Ads, Facebook Ads, Instagram Ads, LinkedIn Ads.</li>
+                    <li>Developing ad copy and creatives (or coordinating with designers).</li>
+                    <li>Audience targeting and segmentation.</li>
+                    <li>Budget management and bid optimization.</li>
+                    <li>Performance tracking, analysis, and reporting using platform analytics and tools like Google Analytics.</li>
+                    <li>Automating reporting and certain campaign management tasks where possible.</li>
+                </ul>
+            </div>
 
         </div>
         <p class="text-lg text-gray-700 leading-relaxed font-medium italic mt-8 border-t pt-4 border-gray-200">
@@ -299,7 +348,7 @@
         });
     }
 
-    // --- NEW JS for Service Filtering ---
+    // --- UPDATED JS for Service Filtering ---
     const searchInput = document.getElementById('searchInput');
     const categoryButtons = document.querySelectorAll('.category-button');
     const serviceItems = document.querySelectorAll('#services-list .service-item');
@@ -313,6 +362,7 @@
 
         serviceItems.forEach(item => {
             const itemText = item.textContent.toLowerCase();
+            // Ensure data-keywords exists before splitting
             const itemKeywords = item.dataset.keywords ? item.dataset.keywords.toLowerCase().split(' ') : [];
 
             // Check search term match (if search term exists)
@@ -320,7 +370,7 @@
 
             // Check category match (if any categories are selected)
             // Item must contain at least one of the active category keywords
-            const matchesCategory = activeCategories.length === 0 || activeCategories.some(category => itemKeywords.includes(category) || itemText.includes(category)); // Fallback to text search if keyword missing
+            const matchesCategory = activeCategories.length === 0 || activeCategories.some(category => itemKeywords.includes(category));
 
             // Show item if it matches both search (or search is empty) and category (or no categories selected)
             if (matchesSearch && matchesCategory) {
@@ -339,12 +389,14 @@
     // Event listeners for category buttons
     categoryButtons.forEach(button => {
         button.addEventListener('click', () => {
-            button.classList.toggle('active'); // Toggle active state
+            // Toggle active state - allow multiple active buttons
+            button.classList.toggle('active');
+
             filterServices(); // Re-filter after category change
         });
     });
 
-    // --- NEW JS for Collapsible Email ---
+    // --- JS for Collapsible Email ---
     const toggleEmailButton = document.getElementById('toggle-email');
     const emailDisplay = document.getElementById('email-display');
 
@@ -356,7 +408,7 @@
         });
     }
 
-    // Initial filter on page load (optional, in case you want default filtering)
+    // Initial filter on page load (optional)
     // filterServices();
 
 </script>
