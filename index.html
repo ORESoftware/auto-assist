@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Mills - Business & Personal Assistant Automation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Optional: Add custom base styles or component styles here if needed */
+        body {
+            font-family: 'Inter', sans-serif; /* Example using a common sans-serif font */
+        }
+        /* Add Inter font from Google Fonts (Optional but recommended with Tailwind) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+        /* Custom styling for nested lists */
+        #services .service-item ul ul { /* Target nested ULs specifically within the services section's items */
+            list-style-type: circle;
+            margin-left: 1.5rem; /* Indent nested lists */
+            margin-top: 0.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Style for testimonial borders */
+        #testimonials-content > div:not(:last-child) {
+            border-bottom: 1px solid #e5e7eb; /* gray-200 */
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Style for active category button */
+        .category-button.active {
+            background-color: #2563eb; /* blue-600 */
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 leading-normal">
+
+<!-- Header / Hero Section -->
+<header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16 px-4 text-center shadow-lg">
+    <div class="container mx-auto max-w-4xl">
+        <!-- Image Placeholder -->
+        <img
+                src="<!-- PASTE YOUR BASE64 IMAGE DATA STRING HERE -->"
+                alt="Alex Mills"
+                class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 border-4 border-white shadow-md object-cover"
+                onerror="this.style.display='none'; console.error('Base64 image failed to load or is missing.');"
+        >
+        <!-- End Image Placeholder -->
+
+        <h1 class="text-4xl md:text-5xl font-bold mb-2">Alex Mills</h1>
+        <p class="text-xl md:text-2xl font-light text-indigo-100 mb-4">Automation for Small Business & as Personal Assistant</p>
+        <!-- Added Tags -->
+        <div class="flex justify-center space-x-3 mt-3">
+            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">Flexible + Affordable Rates</span>
+            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Pay As You Go</span>
+        </div>
+        <!-- End Added Tags -->
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto max-w-4xl mt-[-50px] px-4 z-10 relative">
+
+    <!-- About Me Section -->
+    <section id="about-me" class="bg-white p-8 rounded-lg shadow-md mb-8">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-4 border-b pb-2 border-gray-200">About Me</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+            I am a software engineer with more than 15 years experience in industry.
+            I help business owners and entrepreneurs automate their tasks and workflows, using custom code, Zapier, n8n, Make.com, Google Workspaces and MS 365.
+            <b>Everything is done in-house by me, myself, and I :)</b>
+        </p>
+    </section>
+
+    <!-- Operating Location Section -->
+    <section id="location" class="bg-white p-8 rounded-lg shadow-md mb-8">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-4 border-b pb-2 border-gray-200">Operating From</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+            Operating remotely out of <span class="font-medium text-blue-700">NYC</span>.
+            Out-calls possible in Manhattan and nearby villages.
+        </p>
+    </section>
+
+    <!-- What We Offer Section -->
+    <section id="services" class="bg-white p-8 rounded-lg shadow-md mb-8">
+        <h2 class="text-3xl font-semibold text-gray-900 mb-4 border-b pb-2 border-gray-200">What We Offer</h2>
+
+        <!-- Filter Controls -->
+        <div id="filter-controls" class="mb-8 p-4 border border-gray-200 rounded-md bg-gray-50">
+            <div class="mb-4">
+                <label for="searchInput" class="sr-only">Search Offerings</label>
+                <input type="text" id="searchInput" placeholder="Search offerings..." class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+            <div>
+                <h4 class="text-sm font-semibold text-gray-600 mb-2">Filter by Category:</h4>
+                <div id="categoryButtons" class="flex flex-wrap gap-2">
+                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="automation">Automation</button>
+                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="data">Data</button>
+                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="llm">LLM</button>
+                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="productivity">Productivity</button>
+                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="web">Web</button>
+                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="database">Database</button>
+                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="spreadsheet">Spreadsheet</button>
+                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="custom code">Custom Code</button>
+                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="marketing">Marketing</button>
+                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="sales">Sales</button>
+                    <button class="category-button px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded-full hover:bg-gray-300 transition" data-category="admin">Admin</button>
+                    <!-- Add more categories as needed -->
+                </div>
+            </div>
+        </div>
+        <!-- End Filter Controls -->
+
+        <div id="services-list" class="space-y-6 text-gray-700 text-lg leading-relaxed">
+            <!-- Service Item Structure: Use data-keywords for filtering -->
+            <div class="service-item" data-keywords="core personal business automation google workspace ms 365 email calendar custom code productivity web">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2">Core Personal & Business Automation</h3>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Automating calendar events, email, reminders, and email responses (Google App Scripts & MS 365 tools).</li>
+                    <li>Website chat widget implementation.</li>
+                    <li>Website SEO improvement.</li>
+                    <li>Custom cross-platform marketing campaigns.</li>
+                </ul>
+            </div>
+
+            <div class="service-item" data-keywords="lead generation marketing automation crm spreadsheet zapier make mailchimp activecampaign gmail social media buffer hootsuite content repurposing ai n8n web">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">1. Lead Generation & Marketing Automation</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><span class="font-medium">Lead Capture & Nurturing:</span><ul><li>Website Forms: Automate CRM/spreadsheet data entry, lead tagging, and notifications (Zapier/Make).</li><li>Automated Follow-ups: Setup email sequences for inquiries (Mailchimp, ActiveCampaign, Gmail via Zapier/Make).</li></ul></li>
+                    <li><span class="font-medium">Social Media Scheduling:</span> Use tools like Buffer/Hootsuite for automated posting (Zapier/Make integrations).</li>
+                    <li><span class="font-medium">Content Repurposing:</span> Automate blog-to-social/email content generation (AI tools + Zapier/Make/n8n).</li>
+                </ul>
+            </div>
+
+            <div class="service-item" data-keywords="sales process automation proposal pandadoc google docs zapier make calendly crm custom code">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">2. Sales Process Automation</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><span class="font-medium">Proposal Generation:</span> Standardized templates with auto-population (PandaDoc, Google Docs + Zapier/Make).</li>
+                    <li><span class="font-medium">Proposal Tracking:</span> Automate follow-up reminders for viewed/unsigned proposals.</li>
+                    <li><span class="font-medium">Meeting Scheduling Integration (Calendly, etc.):</span><ul><li>Auto-create meeting prep tasks in project management tools.</li><li>Send custom automated reminder emails/SMS.</li><li>Auto-update CRM records based on meeting status.</li></ul></li>
+                </ul>
+            </div>
+
+            <div class="service-item" data-keywords="client onboarding automation welcome email google drive onedrive trello asana quickbooks stripe zapier make n8n admin">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">3. Client Onboarding Automation</h3>
+                <ul class="list-disc list-inside space-y-1">
+                    <li><span class="font-medium">Automated Welcome Sequence:</span> Send welcome emails, create client folders (Google Drive/OneDrive), setup base projects (Trello, Asana, etc.), generate initial invoices (QuickBooks, Stripe, etc.), and prompt for kick-off call scheduling upon contract signing.</li>
+                </ul>
+            </div>
+
+            <div class="service-item" data-keywords="project management operations automation zapier make pm tool clockify toggl google sheets data studio airtable reporting admin data">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">4. Project Management & Operations Automation</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><span class="font-medium">Task Creation:</span> Automate standard project task setup based on service package (Zapier/Make + PM tool).</li>
+                    <li><span class="font-medium">Internal Reminders:</span> Set automated alerts for key project milestones or deadlines.</li>
+                    <li><span class="font-medium">Time Tracking Integration:</span> Connect time tracking (Clockify/Toggl) with invoicing/PM tools.</li>
+                    <li><span class="font-medium">Reporting:</span> Automate internal reports (revenue, profitability, time per client) via tool connections (Google Sheets, Data Studio, Airtable).</li>
+                </ul>
+            </div>
+
+            <div class="service-item" data-keywords="client communication management automation status updates information requests offboarding zapier make email data admin">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">5. Client Communication & Management Automation</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><span class="font-medium">Status Updates:</span> Partially automate status reports by pulling completed tasks into email templates (Zapier/Make).</li>
+                    <li><span class="font-medium">Information Requests:</span> Automate follow-up reminders for outstanding client assets/information.</li>
+                    <li><span class="font-medium">Offboarding/Project Completion:</span><ul><li>Automate final report/summary delivery.</li><li>Automate final invoice generation.</li><li>Automate feedback/testimonial request emails post-completion.</li><li>Automate project file and task archiving.</li></ul></li>
+                </ul>
+            </div>
+
+            <div class="service-item" data-keywords="financial administrative automation invoice payment reminders expense tracking zapier make expensify admin">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">6. Financial & Administrative Automation</h3>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><span class="font-medium">Invoice Generation:</span> Automate recurring or milestone-based invoices (Accounting software + Zapier/Make).</li>
+                    <li><span class="font-medium">Payment Reminders:</span> Automate reminders for upcoming/overdue invoices.</li>
+                    <li><span class="font-medium">Expense Tracking:</span> Automate categorization of expenses via email receipts or bank feeds (Expensify, Zapier/Make).</li>
+                </ul>
+            </div>
+
+            <!-- NEW OFFERINGS START HERE -->
+            <div class="service-item" data-keywords="custom chrome extension productivity browser automation custom code web">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">7. Custom Chrome Extensions</h3>
+                <p>Develop bespoke Chrome extensions to streamline browser-based workflows, automate repetitive tasks within web applications, or enhance productivity.</p>
+            </div>
+
+            <div class="service-item" data-keywords="file analysis tagging llm ai data organization custom code automation">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">8. File Analysis & Tagging with LLMs</h3>
+                <p>Utilize modern Large Language Model (LLM) tools to analyze batches of documents or files, extract key information, and automatically apply relevant tags for better organization and searchability.</p>
+            </div>
+
+            <div class="service-item" data-keywords="proof of concept poc mvp custom code development innovation testing">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">9. General Proof of Concepts (POCs)</h3>
+                <p>Build functional prototypes or proof of concepts to test the feasibility of new ideas, automation workflows, or software solutions before committing to full-scale development.</p>
+            </div>
+
+            <div class="service-item" data-keywords="data migration spreadsheet database excel google sheets airtable sql nosql data transformation etl">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">10. Spreadsheet ↔ Database Migrations</h3>
+                <p>Migrate data efficiently between spreadsheets (Excel, Google Sheets) and structured databases (like SQL, Airtable, etc.), or vice versa, ensuring data integrity and usability.</p>
+            </div>
+
+            <div class="service-item" data-keywords="data deduplication cleaning records database spreadsheet crm list hygiene data quality">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">11. Record Deduplication</h3>
+                <p>Identify and merge (semantic) duplicate records within datasets, spreadsheets, CRMs, or databases to improve data quality, accuracy, and efficiency.</p>
+            </div>
+
+            <div class="service-item" data-keywords="anomaly detection data analysis outliers monitoring reporting statistics custom code llm ai">
+                <h3 class="text-xl font-semibold text-blue-800 mb-2 mt-6">12. Anomaly Detection</h3>
+                <p>Implement systems or scripts to automatically detect unusual patterns, outliers, or anomalies in your data streams or datasets, enabling proactive identification of potential issues or opportunities.</p>
+            </div>
+            <!-- NEW OFFERINGS END HERE -->
+
+        </div>
+        <p class="text-lg text-gray-700 leading-relaxed font-medium italic mt-8 border-t pt-4 border-gray-200">
+            Everything is done in house by myself. Tell me what you need done and most likely we can do it.
+        </p>
+    </section>
+
+    <!-- Testimonials Section (Collapsible) -->
+    <section id="testimonials" class="bg-white p-8 rounded-lg shadow-md mb-8">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-3xl font-semibold text-gray-900">Testimonials</h2>
+            <button id="toggle-testimonials" class="bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md transition duration-150 ease-in-out">
+                Show Testimonials
+            </button>
+        </div>
+        <div id="testimonials-content" class="hidden mt-6 space-y-4">
+            <!-- Testimonial 1 -->
+            <div class="text-gray-700">
+                <p class="italic mb-2">"Alex completely transformed how I manage my leads. The automation saved me hours each week!"</p>
+                <p class="font-semibold">- Jane Doe, Founder @ Startup Inc.
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline ml-2">(LinkedIn)</a>
+                </p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="text-gray-700">
+                <p class="italic mb-2">"The onboarding process is now seamless thanks to Alex's custom workflow. Clients are impressed from day one."</p>
+                <p class="font-semibold">- John Smith, Agency Owner
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline ml-2">(LinkedIn)</a>
+                </p>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="text-gray-700">
+                <p class="italic mb-2">"I was drowning in emails and calendar invites. Alex built a system that gave me back control of my schedule."</p>
+                <p class="font-semibold">- Sarah Lee, Freelance Consultant
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline ml-2">(LinkedIn)</a>
+                </p>
+            </div>
+            <!-- Testimonial 4 -->
+            <div class="text-gray-700">
+                <p class="italic mb-2">"From proposal generation to invoicing, our sales pipeline is so much smoother and faster now."</p>
+                <p class="font-semibold">- Michael B., Sales Director
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline ml-2">(LinkedIn)</a>
+                </p>
+            </div>
+            <!-- Testimonial 5 -->
+            <div class="text-gray-700">
+                <p class="italic mb-2">"Highly recommend Alex for any small business looking to leverage automation. Professional, efficient, and effective."</p>
+                <p class="font-semibold">- Emily White, Small Business Owner
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline ml-2">(LinkedIn)</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- UPDATED Contact Section (Collapsible Email) -->
+    <section id="contact-email" class="bg-blue-50 p-8 rounded-lg shadow-md mb-8 text-center">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-4">Ready to Automate? Get in Touch</h2>
+        <button id="toggle-email" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+            Show Email Address
+        </button>
+        <div id="email-display" class="hidden mt-4 text-lg text-gray-700 font-mono bg-white p-3 rounded border border-gray-200 inline-block">
+            alexander.d.mills@gmail.com
+        </div>
+    </section>
+    <!-- End UPDATED Contact Section -->
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-300 py-6 mt-12 text-center">
+    <div class="container mx-auto max-w-4xl px-4">
+        <p>© <span id="current-year"></span> Alex Mills. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Simple JS to update the year in the footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // JS for Testimonials Toggle
+    const toggleTestimonialsButton = document.getElementById('toggle-testimonials');
+    const testimonialsContent = document.getElementById('testimonials-content');
+
+    if (toggleTestimonialsButton && testimonialsContent) {
+        toggleTestimonialsButton.addEventListener('click', () => {
+            const isHidden = testimonialsContent.classList.contains('hidden');
+            testimonialsContent.classList.toggle('hidden');
+            toggleTestimonialsButton.textContent = isHidden ? 'Hide Testimonials' : 'Show Testimonials';
+        });
+    }
+
+    // --- NEW JS for Service Filtering ---
+    const searchInput = document.getElementById('searchInput');
+    const categoryButtons = document.querySelectorAll('.category-button');
+    const serviceItems = document.querySelectorAll('#services-list .service-item');
+
+    // Function to perform filtering based on search term and active categories
+    function filterServices() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const activeCategories = Array.from(categoryButtons)
+            .filter(button => button.classList.contains('active'))
+            .map(button => button.dataset.category);
+
+        serviceItems.forEach(item => {
+            const itemText = item.textContent.toLowerCase();
+            const itemKeywords = item.dataset.keywords ? item.dataset.keywords.toLowerCase().split(' ') : [];
+
+            // Check search term match (if search term exists)
+            const matchesSearch = !searchTerm || itemText.includes(searchTerm);
+
+            // Check category match (if any categories are selected)
+            // Item must contain at least one of the active category keywords
+            const matchesCategory = activeCategories.length === 0 || activeCategories.some(category => itemKeywords.includes(category) || itemText.includes(category)); // Fallback to text search if keyword missing
+
+            // Show item if it matches both search (or search is empty) and category (or no categories selected)
+            if (matchesSearch && matchesCategory) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    // Event listener for search input
+    if (searchInput) {
+        searchInput.addEventListener('input', filterServices);
+    }
+
+    // Event listeners for category buttons
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            button.classList.toggle('active'); // Toggle active state
+            filterServices(); // Re-filter after category change
+        });
+    });
+
+    // --- NEW JS for Collapsible Email ---
+    const toggleEmailButton = document.getElementById('toggle-email');
+    const emailDisplay = document.getElementById('email-display');
+
+    if (toggleEmailButton && emailDisplay) {
+        toggleEmailButton.addEventListener('click', () => {
+            const isHidden = emailDisplay.classList.contains('hidden');
+            emailDisplay.classList.toggle('hidden');
+            toggleEmailButton.textContent = isHidden ? 'Hide Email Address' : 'Show Email Address';
+        });
+    }
+
+    // Initial filter on page load (optional, in case you want default filtering)
+    // filterServices();
+
+</script>
+
+</body>
+</html>
